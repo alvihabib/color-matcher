@@ -1,0 +1,292 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/altera_lite/16.0/labFinalProject/ColorMatcher
+vCardDisplay
+Z1 !s110 1480468466
+!i10b 1
+!s100 ``5RBhUK?D5bgXzUD>8lI1
+IoGVz5RTmJ[ULGSI619jaB2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1480464823
+8CardDisplay.v
+FCardDisplay.v
+L0 1
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1480468466.000000
+!s107 CardDisplay.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|CardDisplay.v|
+!i113 1
+Z5 o-timescale 1ns/1ns
+n@card@display
+vColorMatcher
+R1
+!i10b 1
+!s100 Y[BJC0Q@DT;<OZ^53SYo80
+I0P`<cAeH?ABm2Wc9=>U4=3
+R2
+R0
+Z6 w1480464836
+Z7 8ColorMatcher.v
+Z8 FColorMatcher.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+Z9 !s107 ColorMatcher.v|
+Z10 !s90 -reportprogress|300|-timescale|1ns/1ns|ColorMatcher.v|
+!i113 1
+R5
+n@color@matcher
+vcontrol
+R1
+!i10b 1
+!s100 Qk=hkdbEQa<hTh5z_m8Gh3
+IZ^ejk@m960SYQdW@a9QG<3
+R2
+R0
+w1480457628
+8control.v
+Fcontrol.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 control.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|control.v|
+!i113 1
+R5
+vdelay_10s
+R1
+!i10b 1
+!s100 Z5V_S5hJ0f2PlCRbALLlk3
+IV>=<K_CA:^PkThhScLa6;0
+R2
+R0
+Z11 w1480315226
+Z12 8timer.v
+Z13 Ftimer.v
+L0 104
+R3
+r1
+!s85 0
+31
+R4
+Z14 !s107 timer.v|
+Z15 !s90 -reportprogress|300|-timescale|1ns/1ns|timer.v|
+!i113 1
+R5
+vdelay_1s
+R1
+!i10b 1
+!s100 Y6nd9;>65d@[KBh>>;FmI3
+IXW_fhN]fL]3nA9MeYh=Gn1
+R2
+R0
+R11
+R12
+R13
+L0 84
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+vhex_decoder
+R1
+!i10b 1
+!s100 VjmU<S_?JL<nXd9i@`IP32
+Ib0KiiUij=KhVTMQMJA1Rh1
+R2
+R0
+R6
+R7
+R8
+L0 127
+R3
+r1
+!s85 0
+31
+R4
+R9
+R10
+!i113 1
+R5
+vkeyboard
+Z16 !s110 1480299643
+!i10b 1
+!s100 T`lfF_L^BD7lRe@8@SEI[3
+ImZ9JcNW?nUP<jzU_WHWV?3
+R2
+R0
+w1479770088
+8keyboard.v
+Fkeyboard.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z17 !s108 1480299643.000000
+!s107 keyboard.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|keyboard.v|
+!i113 1
+R5
+voneshot
+R16
+!i10b 1
+!s100 06`nO0<H[>3;1<9M0Hdcl1
+I]n8ODQk8zn;=:DW3YR8O93
+R2
+R0
+w1479770092
+8oneshot.v
+Foneshot.v
+L0 1
+R3
+r1
+!s85 0
+31
+R17
+!s107 oneshot.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|oneshot.v|
+!i113 1
+R5
+vtimer
+R1
+!i10b 1
+!s100 S_BX8?d35nz;hRlIGX3WA0
+I>?iK<NV2EAJ3ZSed<K_@G3
+R2
+R0
+R11
+R12
+R13
+L0 58
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+vup_counter
+R1
+!i10b 1
+!s100 CLc6WhF2YTaM^4gI?eJiD3
+I?:5zOjEzUT=^e_9e0kP2`1
+R2
+R0
+R11
+R12
+R13
+L0 125
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+vvga_adapter
+Z18 !s110 1480299056
+!i10b 1
+!s100 hkUB>b^KO=L]9S>>Mk8nj1
+I4QaaXbcO1T<f2eNZi4E<N2
+R2
+R0
+Z19 w1478541025
+8vga_adapter.v
+Fvga_adapter.v
+L0 78
+R3
+r1
+!s85 0
+31
+Z20 !s108 1480299056.000000
+!s107 vga_adapter.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|vga_adapter.v|
+!i113 1
+R5
+vvga_address_translator
+R18
+!i10b 1
+!s100 3:mV5[e>gggL@b>hDoKk>3
+IQiK4P@lXOPD]=<<LDVi;12
+R2
+R0
+R19
+8vga_address_translator.v
+Fvga_address_translator.v
+L0 4
+R3
+r1
+!s85 0
+31
+R20
+!s107 vga_address_translator.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|vga_address_translator.v|
+!i113 1
+R5
+vvga_controller
+R18
+!i10b 1
+!s100 cVLRelV0U7V5APo3<>Q0P3
+I_O3=XbE^NFdN:oELEZaQN2
+R2
+R0
+R19
+8vga_controller.v
+Fvga_controller.v
+L0 9
+R3
+r1
+!s85 0
+31
+R20
+!s107 vga_controller.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|vga_controller.v|
+!i113 1
+R5
+vvga_pll
+R18
+!i10b 1
+!s100 4XSTjD`VEiamX^n1@5J`b3
+I<G39Ci?a@]HUYTQCYnK150
+R2
+R0
+R19
+8vga_pll.v
+Fvga_pll.v
+L0 36
+R3
+r1
+!s85 0
+31
+R20
+!s107 vga_pll.v|
+!s90 -reportprogress|300|-timescale|1ns/1ns|vga_pll.v|
+!i113 1
+R5

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at keyboard.v(47): always construct contains both blocking and non-blocking assignments File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/keyboard.v Line: 47

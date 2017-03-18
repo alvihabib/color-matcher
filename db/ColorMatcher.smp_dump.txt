@@ -1,0 +1,13 @@
+
+State Machine - |ColorMatcher|control:control|current_state
+Name current_state.S_IS_FINISHED current_state.S_CORRECT current_state.S_INCORRECT_WAIT current_state.S_INCORRECT current_state.S_CHECK current_state.S_SECOND_WAIT current_state.S_SECOND_CARD current_state.S_FIRST_WAIT current_state.S_FIRST_CARD current_state.S_CHOOSE_LEVEL 
+current_state.S_CHOOSE_LEVEL 0 0 0 0 0 0 0 0 0 0 
+current_state.S_FIRST_CARD 0 0 0 0 0 0 0 0 1 1 
+current_state.S_FIRST_WAIT 0 0 0 0 0 0 0 1 0 1 
+current_state.S_SECOND_CARD 0 0 0 0 0 0 1 0 0 1 
+current_state.S_SECOND_WAIT 0 0 0 0 0 1 0 0 0 1 
+current_state.S_CHECK 0 0 0 0 1 0 0 0 0 1 
+current_state.S_INCORRECT 0 0 0 1 0 0 0 0 0 1 
+current_state.S_INCORRECT_WAIT 0 0 1 0 0 0 0 0 0 1 
+current_state.S_CORRECT 0 1 0 0 0 0 0 0 0 1 
+current_state.S_IS_FINISHED 1 0 0 0 0 0 0 0 0 1 

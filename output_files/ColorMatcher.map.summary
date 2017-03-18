@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Nov 29 14:46:45 2016
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : ColorMatcher
+Top-level Entity Name : ColorMatcher
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 78
+Total pins : 94
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

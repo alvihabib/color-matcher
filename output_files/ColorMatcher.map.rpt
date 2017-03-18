@@ -1,0 +1,523 @@
+Analysis & Synthesis report for ColorMatcher
+Tue Nov 29 14:46:45 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |ColorMatcher|control:control|current_state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "CardDisplay:card"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Nov 29 14:46:45 2016       ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                   ; ColorMatcher                                ;
+; Top-level Entity Name           ; ColorMatcher                                ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 78                                          ;
+; Total pins                      ; 94                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; ColorMatcher       ; ColorMatcher       ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; ColorMatcher.v                   ; yes             ; User Verilog HDL File        ; C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v ;         ;
+; CardDisplay.v                    ; yes             ; User Verilog HDL File        ; C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v  ;         ;
+; control.v                        ; yes             ; User Verilog HDL File        ; C:/altera_lite/16.0/labFinalProject/ColorMatcher/control.v      ;         ;
+; timer.v                          ; yes             ; Auto-Found Verilog HDL File  ; C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v        ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 70             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 125            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 14             ;
+;     -- 5 input functions                    ; 19             ;
+;     -- 4 input functions                    ; 29             ;
+;     -- <=3 input functions                  ; 63             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 78             ;
+;                                             ;                ;
+; I/O pins                                    ; 94             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 78             ;
+; Total fan-out                               ; 789            ;
+; Average fan-out                             ; 2.02           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name  ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------+--------------+--------------+
+; |ColorMatcher              ; 125 (0)           ; 78 (0)       ; 0                 ; 0          ; 94   ; 0            ; |ColorMatcher                       ; ColorMatcher ; work         ;
+;    |CardDisplay:card|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|CardDisplay:card      ; CardDisplay  ; work         ;
+;    |control:control|       ; 14 (14)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|control:control       ; control      ; work         ;
+;    |hex_decoder:h0|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|hex_decoder:h0        ; hex_decoder  ; work         ;
+;    |hex_decoder:h1|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|hex_decoder:h1        ; hex_decoder  ; work         ;
+;    |hex_decoder:h4|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|hex_decoder:h4        ; hex_decoder  ; work         ;
+;    |timer:t|               ; 89 (11)           ; 63 (0)       ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|timer:t               ; timer        ; work         ;
+;       |delay_10s:d1|       ; 37 (37)           ; 29 (29)      ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|timer:t|delay_10s:d1  ; delay_10s    ; work         ;
+;       |delay_1s:d0|        ; 31 (31)           ; 26 (26)      ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|timer:t|delay_1s:d0   ; delay_1s     ; work         ;
+;       |up_counter:u0|      ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|timer:t|up_counter:u0 ; up_counter   ; work         ;
+;       |up_counter:u1|      ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |ColorMatcher|timer:t|up_counter:u1 ; up_counter   ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ColorMatcher|control:control|current_state                                                                                                                                                                                                                                                                      ;
++--------------------------------+-----------------------------+-------------------------+--------------------------------+---------------------------+-----------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+------------------------------+
+; Name                           ; current_state.S_IS_FINISHED ; current_state.S_CORRECT ; current_state.S_INCORRECT_WAIT ; current_state.S_INCORRECT ; current_state.S_CHECK ; current_state.S_SECOND_WAIT ; current_state.S_SECOND_CARD ; current_state.S_FIRST_WAIT ; current_state.S_FIRST_CARD ; current_state.S_CHOOSE_LEVEL ;
++--------------------------------+-----------------------------+-------------------------+--------------------------------+---------------------------+-----------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+------------------------------+
+; current_state.S_CHOOSE_LEVEL   ; 0                           ; 0                       ; 0                              ; 0                         ; 0                     ; 0                           ; 0                           ; 0                          ; 0                          ; 0                            ;
+; current_state.S_FIRST_CARD     ; 0                           ; 0                       ; 0                              ; 0                         ; 0                     ; 0                           ; 0                           ; 0                          ; 1                          ; 1                            ;
+; current_state.S_FIRST_WAIT     ; 0                           ; 0                       ; 0                              ; 0                         ; 0                     ; 0                           ; 0                           ; 1                          ; 0                          ; 1                            ;
+; current_state.S_SECOND_CARD    ; 0                           ; 0                       ; 0                              ; 0                         ; 0                     ; 0                           ; 1                           ; 0                          ; 0                          ; 1                            ;
+; current_state.S_SECOND_WAIT    ; 0                           ; 0                       ; 0                              ; 0                         ; 0                     ; 1                           ; 0                           ; 0                          ; 0                          ; 1                            ;
+; current_state.S_CHECK          ; 0                           ; 0                       ; 0                              ; 0                         ; 1                     ; 0                           ; 0                           ; 0                          ; 0                          ; 1                            ;
+; current_state.S_INCORRECT      ; 0                           ; 0                       ; 0                              ; 1                         ; 0                     ; 0                           ; 0                           ; 0                          ; 0                          ; 1                            ;
+; current_state.S_INCORRECT_WAIT ; 0                           ; 0                       ; 1                              ; 0                         ; 0                     ; 0                           ; 0                           ; 0                          ; 0                          ; 1                            ;
+; current_state.S_CORRECT        ; 0                           ; 1                       ; 0                              ; 0                         ; 0                     ; 0                           ; 0                           ; 0                          ; 0                          ; 1                            ;
+; current_state.S_IS_FINISHED    ; 1                           ; 0                       ; 0                              ; 0                         ; 0                     ; 0                           ; 0                           ; 0                          ; 0                          ; 1                            ;
++--------------------------------+-----------------------------+-------------------------+--------------------------------+---------------------------+-----------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++------------------------------------------------+----------------------------------------+
+; Register name                                  ; Reason for Removal                     ;
++------------------------------------------------+----------------------------------------+
+; control:control|temp1[1..7]                    ; Merged with control:control|temp1[0]   ;
+; control:control|temp2[1..7]                    ; Merged with control:control|temp2[0]   ;
+; control:control|temp1[0]                       ; Lost fanout                            ;
+; control:control|temp2[0]                       ; Lost fanout                            ;
+; control:control|reveal_v                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_c                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_x                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_z                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_f                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_d                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_s                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_a                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_r                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_e                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_w                       ; Stuck at GND due to stuck port data_in ;
+; control:control|reveal_q                       ; Stuck at GND due to stuck port data_in ;
+; control:control|current_state~2                ; Lost fanout                            ;
+; control:control|current_state~3                ; Lost fanout                            ;
+; control:control|current_state~4                ; Lost fanout                            ;
+; control:control|current_state~5                ; Lost fanout                            ;
+; control:control|current_state.S_INCORRECT      ; Stuck at GND due to stuck port data_in ;
+; control:control|current_state.S_IS_FINISHED    ; Stuck at GND due to stuck port data_in ;
+; control:control|current_state.S_INCORRECT_WAIT ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 35         ;                                        ;
++------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                            ;
++-------------------------------------------+---------------------------+------------------------------------------------+
+; Register name                             ; Reason for Removal        ; Registers Removed due to This Register         ;
++-------------------------------------------+---------------------------+------------------------------------------------+
+; control:control|current_state.S_INCORRECT ; Stuck at GND              ; control:control|current_state.S_INCORRECT_WAIT ;
+;                                           ; due to stuck port data_in ;                                                ;
++-------------------------------------------+---------------------------+------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 78    ;
+; Number of registers using Synchronous Clear  ; 45    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 47    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ColorMatcher|timer:t|up_counter:u0|out[2]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ColorMatcher|timer:t|up_counter:u1|out[2]   ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |ColorMatcher|timer:t|delay_1s:d0|count[15]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |ColorMatcher|timer:t|delay_1s:d0|count[4]   ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 0 LEs                ; 44 LEs                 ; Yes        ; |ColorMatcher|timer:t|delay_10s:d1|count[23] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |ColorMatcher|timer:t|delay_10s:d1|count[0]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CardDisplay:card"                                                                    ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; x_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; plot  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 78                          ;
+;     ENA               ; 2                           ;
+;     ENA SCLR          ; 45                          ;
+;     plain             ; 31                          ;
+; arriav_lcell_comb     ; 130                         ;
+;     arith             ; 55                          ;
+;         1 data inputs ; 55                          ;
+;     normal            ; 75                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 29                          ;
+;         5 data inputs ; 19                          ;
+;         6 data inputs ; 14                          ;
+; boundary_port         ; 94                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.80                        ;
+; Average LUT depth     ; 2.60                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Tue Nov 29 14:46:10 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ColorMatcher -c ColorMatcher
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 2 entities, in source file colormatcher.v
+    Info (12023): Found entity 1: ColorMatcher File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 2
+    Info (12023): Found entity 2: hex_decoder File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 127
+Warning (12019): Can't analyze file -- file Card.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file carddisplay.v
+    Info (12023): Found entity 1: CardDisplay File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 1
+Warning (12019): Can't analyze file -- file WipeScreen.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file control.v
+    Info (12023): Found entity 1: control File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/control.v Line: 1
+Info (12127): Elaborating entity "ColorMatcher" for the top level hierarchy
+Warning (10034): Output port "HEX5" at ColorMatcher.v(23) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+Warning (10034): Output port "VGA_R" at ColorMatcher.v(35) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+Warning (10034): Output port "VGA_G" at ColorMatcher.v(36) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+Warning (10034): Output port "VGA_B" at ColorMatcher.v(37) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+Warning (10034): Output port "VGA_CLK" at ColorMatcher.v(30) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 30
+Warning (10034): Output port "VGA_HS" at ColorMatcher.v(31) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 31
+Warning (10034): Output port "VGA_VS" at ColorMatcher.v(32) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 32
+Warning (10034): Output port "VGA_BLANK_N" at ColorMatcher.v(33) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 33
+Warning (10034): Output port "VGA_SYNC_N" at ColorMatcher.v(34) has no driver File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 34
+Info (12128): Elaborating entity "control" for hierarchy "control:control" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 79
+Info (10264): Verilog HDL Case Statement information at control.v(103): all case item expressions in this case statement are onehot File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/control.v Line: 103
+Info (10264): Verilog HDL Case Statement information at control.v(137): all case item expressions in this case statement are onehot File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/control.v Line: 137
+Info (12128): Elaborating entity "CardDisplay" for hierarchy "CardDisplay:card" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 86
+Warning (10036): Verilog HDL or VHDL warning at CardDisplay.v(14): object "blue" assigned a value but never read File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 14
+Warning (10036): Verilog HDL or VHDL warning at CardDisplay.v(14): object "green" assigned a value but never read File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 14
+Warning (10036): Verilog HDL or VHDL warning at CardDisplay.v(14): object "cyan" assigned a value but never read File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 14
+Warning (10036): Verilog HDL or VHDL warning at CardDisplay.v(14): object "red" assigned a value but never read File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 14
+Warning (10036): Verilog HDL or VHDL warning at CardDisplay.v(14): object "magenta" assigned a value but never read File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 14
+Warning (10036): Verilog HDL or VHDL warning at CardDisplay.v(14): object "yellow" assigned a value but never read File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 14
+Info (10264): Verilog HDL Case Statement information at CardDisplay.v(56): all case item expressions in this case statement are onehot File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 56
+Warning (10230): Verilog HDL assignment warning at CardDisplay.v(86): truncated value with size 32 to match size of target (10) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 86
+Warning (10230): Verilog HDL assignment warning at CardDisplay.v(93): truncated value with size 32 to match size of target (15) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 93
+Warning (10270): Verilog HDL Case Statement warning at CardDisplay.v(100): incomplete case statement has no default case item File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 100
+Info (10264): Verilog HDL Case Statement information at CardDisplay.v(100): all case item expressions in this case statement are onehot File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 100
+Warning (10270): Verilog HDL Case Statement warning at CardDisplay.v(121): incomplete case statement has no default case item File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 121
+Info (10264): Verilog HDL Case Statement information at CardDisplay.v(121): all case item expressions in this case statement are onehot File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 121
+Warning (10230): Verilog HDL assignment warning at CardDisplay.v(145): truncated value with size 32 to match size of target (5) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 145
+Warning (10230): Verilog HDL assignment warning at CardDisplay.v(175): truncated value with size 32 to match size of target (5) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 175
+Warning (10230): Verilog HDL assignment warning at CardDisplay.v(217): truncated value with size 32 to match size of target (5) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 217
+Info (10264): Verilog HDL Case Statement information at CardDisplay.v(141): all case item expressions in this case statement are onehot File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/CardDisplay.v Line: 141
+Warning (12125): Using design file timer.v, which is not specified as a design file for the current project, but contains definitions for 4 design units and 4 entities in project
+    Info (12023): Found entity 1: timer File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 58
+    Info (12023): Found entity 2: delay_1s File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 84
+    Info (12023): Found entity 3: delay_10s File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 104
+    Info (12023): Found entity 4: up_counter File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 125
+Info (12128): Elaborating entity "timer" for hierarchy "timer:t" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 91
+Warning (10230): Verilog HDL assignment warning at timer.v(74): truncated value with size 32 to match size of target (1) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 74
+Warning (10230): Verilog HDL assignment warning at timer.v(75): truncated value with size 32 to match size of target (1) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 75
+Info (12128): Elaborating entity "delay_1s" for hierarchy "timer:t|delay_1s:d0" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 71
+Warning (10230): Verilog HDL assignment warning at timer.v(99): truncated value with size 32 to match size of target (26) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 99
+Info (12128): Elaborating entity "delay_10s" for hierarchy "timer:t|delay_10s:d1" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 72
+Warning (10230): Verilog HDL assignment warning at timer.v(119): truncated value with size 32 to match size of target (29) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 119
+Info (12128): Elaborating entity "up_counter" for hierarchy "timer:t|up_counter:u0" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 77
+Warning (10230): Verilog HDL assignment warning at timer.v(135): truncated value with size 32 to match size of target (4) File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/timer.v Line: 135
+Info (12128): Elaborating entity "hex_decoder" for hierarchy "hex_decoder:h0" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 92
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "scan_code[7]" is missing source, defaulting to GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 73
+    Warning (12110): Net "scan_code[6]" is missing source, defaulting to GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 73
+    Warning (12110): Net "scan_code[5]" is missing source, defaulting to GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 73
+    Warning (12110): Net "scan_code[4]" is missing source, defaulting to GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 73
+    Warning (12110): Net "scan_code[3]" is missing source, defaulting to GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 73
+    Warning (12110): Net "scan_code[2]" is missing source, defaulting to GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 73
+    Warning (12110): Net "scan_code[1]" is missing source, defaulting to GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 73
+    Warning (12110): Net "scan_code[0]" is missing source, defaulting to GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 73
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 23
+    Warning (13410): Pin "VGA_CLK" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 30
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 31
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 32
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 33
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 34
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[8]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_R[9]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 35
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[8]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_G[9]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 36
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[8]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+    Warning (13410): Pin "VGA_B[9]" is stuck at GND File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 37
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 22
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 22
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 21
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 21
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 21
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 21
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 21
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 21
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 21
+    Warning (15610): No output dependent on input pin "PS2_DAT" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 25
+    Warning (15610): No output dependent on input pin "PS2_CLK" File: C:/altera_lite/16.0/labFinalProject/ColorMatcher/ColorMatcher.v Line: 26
+Info (21057): Implemented 222 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 77 output pins
+    Info (21061): Implemented 128 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 109 warnings
+    Info: Peak virtual memory: 864 megabytes
+    Info: Processing ended: Tue Nov 29 14:46:45 2016
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:15
+
+
