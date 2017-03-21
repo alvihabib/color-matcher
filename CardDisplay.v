@@ -30,29 +30,6 @@ module CardDisplay(
 	
 	// Level chooser ALU
 	always @(*) begin
-		/*case(level)
-			3'b001: begin //Level 1: 2x2
-			
-			x1 <= 8'd40; x2 <= 8'd80; x3 <= 0; x4 <= 0;
-			y1 <= 7'd27; y2 <= 7'd64; y3 <= 0;
-			c1 <= 3'b111; c2 <= 3'b111; c3 <= 3'b111; c4 <= 3'b111; c5 <= 0; c6 <= 0; c7 <= 0; c8 <= 0; c9 <= 0; c10 <= 0; c11 <= 0; c12 <= 0;
-			end
-			3'b010: begin //Level 2: 3x2
-			x1 <= 8'd25; x2 <= 8'd60; x3 <= 8'd95; x4 <= 0;
-			y1 <= 7'd27; y2 <= 7'd64; y3 <= 0;
-			c1 <= 3'b111; c2 <= 3'b111; c3 <= 3'b111; c4 <= 3'b111; c5 <= 3'b111; c6 <= 3'b111; c7 <= 0; c8 <= 0; c9 <= 0; c10 <= 0; c11 <= 0; c12 <= 0;
-			end
-			3'b100: begin //Level 3: 4x3
-			x1 <= 8'd16; x2 <= 8'd52; x3 <= 8'd88; x4 <= 8'd124;
-			y1 <= 7'd15; y2 <= 7'd50; y3 <= 7'd85;
-			c1 <= 3'b111; c2 <= 3'b111; c3 <= 3'b111; c4 <= 3'b111; c5 <= 3'b111; c6 <= 3'b111; c7 <= 3'b111; c8 <= 3'b111; c9 <= 3'b111; c10 <= 3'b111; c11 <= 3'b111; c12 <= 3'b111;
-			end
-			default: begin //Nothing selected or invalid level.
-			x1 <= 0; x2 <= 0; x3 <= 0; x4 <= 0;
-			y1 <= 0; y2 <= 0; y3 <= 0;
-			c1 <= 0; c2 <= 0; c3 <= 0; c4 <= 0; c5 <= 0; c6 <= 0; c7 <= 0; c8 <= 0; c9 <= 0; c10 <= 0; c11 <= 0; c12 <= 0;
-			end
-		endcase */
 		case(level)
 			3'b001: begin //Level 1: 2x2
 			
