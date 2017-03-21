@@ -1,4 +1,4 @@
-# cd "C:/altera_lite/16.0/labFinalProject/ColorMatcher"
+# cd "C:/altera_lite/16.0/Project/ColorMatcher"
 
 # Set the working dir, where all compiled Verilog goes.
 vlib work
