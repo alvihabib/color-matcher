@@ -21,7 +21,7 @@ white.
 ##### Step 1: Start by choosing a level with SW[2:0]
 - `SW[0]` = Level 1 (2x2)
 - `SW[1]` = Level 2 (3x2)
-- `SW[2]` = Level 3 (3x8)
+- `SW[2]` = Level 3 (3x4)
 ##### Step 2: Use the PS2 keyboard as a grid (Starting with ‘q’ at top left)
 - Press `KEY[3]` to input that key
 - Repeat twice to flip 2 cards
